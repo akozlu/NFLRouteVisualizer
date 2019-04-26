@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>EAS 499 Final Thesis</title>
+  <meta name="description" content="EAS 499 Final Thesis">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="EAS 499 Final Thesis" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="EAS 499 Final Thesis" />
+  
+  
+  
+
+<meta name="author" content="Ali Kozlu">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="index.html">
+<link rel="next" href="2-math.html">
+<style type="text/css">
+p.abstract{
+  text-align: center;
+  font-weight: bold;
+}
+div.abstract{
+  margin: auto;
+  width: 90%;
+}
+</style>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"></a></li>
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="1" data-path="1-rmd-basics.html"><a href="1-rmd-basics.html"><i class="fa fa-check"></i><b>1</b> Background</a><ul>
+<li class="chapter" data-level="1.1" data-path="1-rmd-basics.html"><a href="1-rmd-basics.html#tennis-datasets"><i class="fa fa-check"></i><b>1.1</b> Tennis Datasets</a></li>
+<li class="chapter" data-level="1.2" data-path="1-rmd-basics.html"><a href="1-rmd-basics.html#tennis-betting"><i class="fa fa-check"></i><b>1.2</b> Tennis Betting</a></li>
+<li class="chapter" data-level="1.3" data-path="1-rmd-basics.html"><a href="1-rmd-basics.html#review-of-previous-work"><i class="fa fa-check"></i><b>1.3</b> Review of Previous Work</a></li>
+<li class="chapter" data-level="1.4" data-path="1-rmd-basics.html"><a href="1-rmd-basics.html#including-plots"><i class="fa fa-check"></i><b>1.4</b> Including plots</a></li>
+<li class="chapter" data-level="1.5" data-path="1-rmd-basics.html"><a href="1-rmd-basics.html#loading-and-exploring-data"><i class="fa fa-check"></i><b>1.5</b> Loading and exploring data</a></li>
+<li class="chapter" data-level="1.6" data-path="1-rmd-basics.html"><a href="1-rmd-basics.html#additional-resources"><i class="fa fa-check"></i><b>1.6</b> Additional resources</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-math.html"><a href="2-math.html"><i class="fa fa-check"></i><b>2</b> Feature Engineering</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-math.html"><a href="2-math.html#feature-extraction"><i class="fa fa-check"></i><b>2.1</b> Feature Extraction</a></li>
+<li class="chapter" data-level="2.2" data-path="2-math.html"><a href="2-math.html#feature-selection"><i class="fa fa-check"></i><b>2.2</b> Feature Selection</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="2-math.html"><a href="2-math.html#computing-advanced-statistical-metrics"><i class="fa fa-check"></i><b>2.2.1</b> Computing Advanced Statistical Metrics</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-ref-labels.html"><a href="3-ref-labels.html"><i class="fa fa-check"></i><b>3</b> Tables, Graphics, References, and Labels</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-ref-labels.html"><a href="3-ref-labels.html#tables"><i class="fa fa-check"></i><b>3.1</b> Tables</a></li>
+<li class="chapter" data-level="3.2" data-path="3-ref-labels.html"><a href="3-ref-labels.html#figures"><i class="fa fa-check"></i><b>3.2</b> Figures</a></li>
+<li class="chapter" data-level="3.3" data-path="3-ref-labels.html"><a href="3-ref-labels.html#footnotes-and-endnotes"><i class="fa fa-check"></i><b>3.3</b> Footnotes and Endnotes</a></li>
+<li class="chapter" data-level="3.4" data-path="3-ref-labels.html"><a href="3-ref-labels.html#bibliographies"><i class="fa fa-check"></i><b>3.4</b> Bibliographies</a></li>
+<li class="chapter" data-level="3.5" data-path="3-ref-labels.html"><a href="3-ref-labels.html#anything-else"><i class="fa fa-check"></i><b>3.5</b> Anything else?</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-organization.html"><a href="4-organization.html"><i class="fa fa-check"></i><b>4</b> Organization</a></li>
+<li class="chapter" data-level="" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i>Conclusion</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="A-the-first-appendix.html"><a href="A-the-first-appendix.html"><i class="fa fa-check"></i><b>A</b> The First Appendix</a></li>
+<li class="chapter" data-level="B" data-path="B-the-second-appendix-for-fun.html"><a href="B-the-second-appendix-for-fun.html"><i class="fa fa-check"></i><b>B</b> The Second Appendix, for Fun</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">EAS 499 Final Thesis</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="rmd-basics" class="section level1">
+<h1><span class="header-section-number">Chapter1</span> Background</h1>
+<div id="tennis-datasets" class="section level2">
+<h2><span class="header-section-number">1.1</span> Tennis Datasets</h2>
+<p>As mentioned in the introduction, there is a large amount of historical tennis data freely available. Tennis websites such as <a href="www.atpworldtour.com">atpworldtour.com</a> and <a href="www.tennis-data.co.uk/alldata.php">tennis.data.co.uk</a> provide most comprehensive access to information about players, the outcomes of matches and statistics of certain matches. Other important sources that include historical datasets (as CSV) of ATP Tennis Rankings, Results, and Stats are provided by <a href="https://github.com/JeffSackmann/tennis_atp">Jeff Sackman</a> and <a href="https://github.com/danielkorzekwa/atpworldtour-api">Daniel Korzekwa</a>. A more complex dataset with a longer historical timespan and advanced metrics is provided by the <a href="www.oncourt.info">OnCourt System</a>. The present thesis uses the OnCourt Dataset, which includes statistics of 17625 ATP tennis matches played between 2004-2018 and has results for over 500 thousand ATP matches played since the 1990’s. OnCourt dataset also contains further information such as tournament seeding, tournament round, player age and length of match. OnCourt Dataset, which is in MDB format, is converted into a Sqlite3 database using <a href="https://github.com/brianb/mdbtools">MDB TOOLS</a>. A Pyton script then extracts different information from Sqlite3 Database (tournaments, player names, statistics) and converts the data into Pandas Dataframe.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> The full list of statistics found in OnCourt dataset is omitted, as our model uses none of this additional information. The relevant statistics provided for each match can be seen in the figure below.</p>
+<table style="width:78%;">
+<caption><span id="tab:inher">Table 1.1: </span> Per Match Statistics found in OnCourt Dataset</caption>
+<colgroup>
+<col width="58%" />
+<col width="19%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">OnCourt Match Statistics</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">First Serve percentage</td>
+<td>FS</td>
+</tr>
+<tr class="even">
+<td align="left">Percentage of points won on first serve</td>
+<td>WSP_1</td>
+</tr>
+<tr class="odd">
+<td align="left">Percentage of points won on second serve</td>
+<td>WSP_2</td>
+</tr>
+<tr class="even">
+<td align="left">Percentage of receiving points won</td>
+<td>WRP</td>
+</tr>
+<tr class="odd">
+<td align="left">Double Faults</td>
+<td>DF</td>
+</tr>
+<tr class="even">
+<td align="left">Aces</td>
+<td>ACES</td>
+</tr>
+<tr class="odd">
+<td align="left">Total Points Won</td>
+<td>TPW</td>
+</tr>
+<tr class="even">
+<td align="left">Break Points Won</td>
+<td>BP</td>
+</tr>
+<tr class="odd">
+<td align="left">Total Break Points</td>
+<td>TBP</td>
+</tr>
+<tr class="even">
+<td align="left">Net Approaches</td>
+<td>NA</td>
+</tr>
+<tr class="odd">
+<td align="left">Total Net Approaches</td>
+<td>TNA</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tennis-betting" class="section level2">
+<h2><span class="header-section-number">1.2</span> Tennis Betting</h2>
+<p>There are two main categories of tennis betting: pre-play and in-play. The former is considered as a traditional form of betting, in which a bookmaker offers odds and accepting punters bet directly against the bookmakers. The second category can be played in betting exchanges such as <a href="https://www.betfair.com/exchange/plus/">Bet Fair</a>, in which customers instead offer odds and place bets against each other. A unique option brought by exchanges, called lay betting, allows punters to oppose a selection, i.e. to bet against something happening. In this case, punters can play the role of a traditional bookmaker but offering odds to sell a bet instead of the usual odds to back a bet. In both categories it is possible to bet on a variety of factors, such as such as the winner of the match, the number total sets and the over/under of total number of games. Traditionally, research has focused on bets placed on the overall outcome prior to the match starting as it allows a more comprehensive evaluation of the performance of the generated model against the market. However, experts claim that over 80% of the overall money wagered on tennis matches is bet in-play, i.e., during the course of the match. Thus, instead of only focusing on pre-play, the present thesis attempts to use the model for both pre-play and in-play betting to see the true value of our model. <span class="citation">Webb (2011)</span>. (Also <a href="https://www.dailymail.co.uk/sport/tennis/article-3405544/Tennis-gambling-market-second-football-bookmakers-boom-online-play-betting.html" class="uri">https://www.dailymail.co.uk/sport/tennis/article-3405544/Tennis-gambling-market-second-football-bookmakers-boom-online-play-betting.html</a>).</p>
+</div>
+<div id="review-of-previous-work" class="section level2">
+<h2><span class="header-section-number">1.3</span> Review of Previous Work</h2>
+The earliest attempts to the statistical analysis of tennis matches can be traced back to early 2000’s. <span class="citation">S. Clarke &amp; Dyte (2000)</span> and <span class="citation">Boulier &amp; Stekler (1999)</span> used a single feature, namely ATP computer tennis rankings, to predict a player’s chance of winning. The goal was to see whether the position of a tennis player in world rankings was related to his/her performance in an upcoming tournament. These early attempts fit a logistic regression model to the ATP ratings, to estimate the probability of winning as a function of the difference in rating points. Del Corral &amp; Prieto-Rodriguez (2010) attempt to assess the degree to which the difference in ranking points is good indicators of the outcome of Grand Slam matches. More recently, <span class="citation">Spanias &amp; Knottenbelt (2013)</span> claimed that the ATP ranking system is inaccurate at ranking players with rankings greater than 32, showing that ATP rankings perform much more poorly in this subset of matches with a success rate as low as 55%. Another problem is that there is only one ranking for the four surfaces, thus ranking system does not capture player strengths on different surfaces. More recent state-of-the-art tennis prediction models can be seen as a hierarchical/point model using Markov chains. These models take advantage of the fact that scoring system in tennis has a hierarchical structure, with a match being composed of sets, which are composed of games, which in turn are composed of individual points. Thus one can construct a hierarchical Markov model to estimate the match winning probabilities of both players by using <em>only the probabilities of the two players winning points while serving</em>. Using this singular statistic, one can deduce the probability of a player winning a single point, then a game, then a set, and finally the match, since the Markov chain will reflect the stochastic progression of the score in a game, as in <a href="1-rmd-basics.html#fig:markovchain">1.1</a>. <span class="citation">Hertzmann &amp; Zorin (2001)</span> <span class="citation">Newton &amp; Keller (2005)</span> <span class="citation">James (2008)</span> used Markov chains to generate equivalent hierarchical expressions using the assumption that points are independent and identically distributed. <span class="citation">Klaassen &amp; Magnus (2003)</span> later show that winning the previous point can have a positive influence on winning the current point, but still argue that the model is good approximatio since tnhe deviations from i.i.d. are small. Arguing that small deviations does not unjustify the i.i.d. assumption in forecasting, <span class="citation">Barnett &amp; Clarke (2005)</span>, <span class="citation">Spanias &amp; Knottenbelt (2013)</span> and <span class="citation">Newton &amp; Keller (2005)</span> focus in detail on the estimation of the respective probability of each player winning a point while serving. In order to calculate this probability, <span class="citation">Barnett &amp; Clarke (2005)</span> attempt to mathematically combine the serving ability of the serving player against the returning ability of the returning player. In order to come up with these two numbers, <span class="citation">Barnett &amp; Clarke (2005)</span>’s approach is to can look at historical service statistics of both players and average each player’s statistics. As explained in <span class="citation">Spanias &amp; Knottenbelt (2013)</span>, Barnett’s approach computes two statistics for each player <em><span class="math inline">\(f_{i} \textrm{ and } g_{i}\)</span></em> reflecting their serving and receiving strengths against an average opponent respectively, where <span class="math inline">\(f_{i} \textrm{ and } g_{i}\)</span> are computed as:<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>
+<span class="math display">\[\begin{equation}
+\label{eq:fi}
+{f_{i} = a_{i} b_{i} + (1 - a_{i})\ c_{i}}
+\end{equation}\begin{equation}
+\label{eq:gi}
+{g_{i} = a_{av} d_{i} + (1 - a_{v})\  e_{i}}
+\end{equation}\]</span>
+In which,
+<span class="math display">\[\begin{align*}
+{f_{i} = \text{proportion of points won on serve by player i}}
+\end{align*}\begin{align*}
+{g_{i} = \text{proportion of points won on return by player i}}
+\end{align*}\begin{align*}
+{a_{i} = \text{probability of successful first serve by player i}}
+\end{align*}\begin{align*}
+{a_{av} = \text{average probability of successful first serve (across all players)}}
+\end{align*}\begin{align*}
+{b_{i} = \text{proportion of own successful first serves won by player i}}
+\end{align*}\begin{align*}
+{c_{i} = \text{proportion of own second serves won by player i}}
+\end{align*}\begin{align*}
+{d_{i} = \text{proportion of first serves of opponent won on return by player i}}
+\end{align*}\begin{align*}
+{e_{i} = \text{proportion of second serves of opponent won on return by player i}}
+\end{align*}\]</span>
+<div class="figure" style="text-align: center"><span id="fig:markovchain"></span>
+<img src="figure/markovchain.png" alt="Markov Chain model of a Tennis Game. Taken from Sipko and Knottenbelt" width="208" scale=0.5 />
+<p class="caption">
+Figure 1.1: Markov Chain model of a Tennis Game. Taken from Sipko and Knottenbelt
+</p>
+</div>
+
+<p>Although mathematically sound, one can argue that this approach is far from perfect empirically. Even if is a good approximation; Barnett’s algorithm suffers from bias because players face different opponents of varying skill levels. Knottenbelt’s Common Opponent Model attempts to solve this flaw with Barnett’s algorithm. He adopts the way the serve-winning probabilities of players are calculated before being supplied to the Barnett formulas by only looking at the players’ performance against <em>common opponents</em>. The crucial point is that this version provides a fair basis of comparison between players by analysing match statistics for opponents that both players have encountered in the past. Knottenbelt claims that his common opponent hierarchical Markov model yields 3.8% ROI against the best odds offered by bookmakers for a data set of 2178 diverse tennis matches, but admits that the sample size is big enough to represent the average performance of the model.</p>
+<p>Perhaps more importantly, the hierarchical Markov models do not take other important match statistics such as number of aces, double faults, total points won and second serve winning percentage, into account. Hence it is unrealistic to expect that these models can successfully capture important factors such as playing styles of players, fatigue and individual player strengths. Considering the availability of an immense amount of historical tennis data, recently several master theses have proposed machine learning models as an alternative to stochastic models described above. <span class="citation">Somboonphokkaphan, Phimoltares, &amp; Lursinsap (2009)</span> train neural networks with basic features features, including previous head-to-head match outcomes and first serve percentage etc. The authors claim that the model has 75% accuracy for predicting matches in the 2007 and 2008 Grand Slam tournaments. <span class="citation">Chen, Tian, &amp; Zhong (2017)</span> try support vector classification models (SVC) with linear, RBF and polynomial kernels, but the results of the thesis are inconclusive. A more comprehensive paper by <span class="citation">Sipko (2015)</span>, whose thesis advisor was William Knottenbelt, uses the OnCourt dataset to train a Logistic Regression with interaction features and a Feed-Forward Neural Network Model.Sipko claims the neural network model generated a return on investment of 4.4% when betting on 6315 ATP matches in 2013-2014..<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> Knottenbelt and Sipko use the above mentioned common opponent model to derive not only the proability of winning a point, but all the possible variables representing the qualities of two players, mentioned in Figure (Oncorut dataset). Sipko’s paper is significant not only because of the models it introduces, but also because the novel feature engineering methods it uses to extract tennis match features from raw historical data, characterizing the qualities of two players in the most representative way. The following thesis closely follows the novel feature engineering done by Sipko, which is explained in the next chapter.</p>
+</div>
+<div id="including-plots" class="section level2">
+<h2><span class="header-section-number">1.4</span> Including plots</h2>
+<p>You can also embed plots. For example, here is a way to use the base <strong>R</strong> graphics package to produce a plot using the built-in <code>pressure</code> data set:</p>
+<p><img src="thesis_files/figure-html/pressure-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Note that the <code>echo=FALSE</code> parameter was added to the code chunk to prevent printing of the <strong>R</strong> code that generated the plot. There are plenty of other ways to add chunk options. More information is available at <a href="http://yihui.name/knitr/options/" class="uri">http://yihui.name/knitr/options/</a>.</p>
+<p>Another useful chunk option is the setting of <code>cache=TRUE</code> as you see here. If document rendering becomes time consuming due to long computations or plots that are expensive to generate you can use knitr caching to improve performance. Later in this file, you’ll see a way to reference plots created in <strong>R</strong> or external figures.</p>
+</div>
+<div id="loading-and-exploring-data" class="section level2">
+<h2><span class="header-section-number">1.5</span> Loading and exploring data</h2>
+<p>Included in this template is a file called <code>flights.csv</code>. This file includes a subset of the larger dataset of information about all flights that departed from Seattle and Portland in 2014. More information about this dataset and its <strong>R</strong> package is available at <a href="http://github.com/ismayc/pnwflights14" class="uri">http://github.com/ismayc/pnwflights14</a>. This subset includes only Portland flights and only rows that were complete with no missing values. Merges were also done with the <code>airports</code> and <code>airlines</code> data sets in the <code>pnwflights14</code> package to get more descriptive airport and airline names.</p>
+<p>We can load in this data set using the following command:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;data/flights.csv&quot;</span>)</code></pre></div>
+<p>The data is now stored in the data frame called <code>flights</code> in <strong>R</strong>. To get a better feel for the variables included in this dataset we can use a variety of functions. Here we can see the dimensions (rows by columns) and also the names of the columns.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dim</span>(flights)</code></pre></div>
+<pre><code>[1] 52808    16</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">names</span>(flights)</code></pre></div>
+<pre><code> [1] &quot;month&quot;        &quot;day&quot;          &quot;dep_time&quot;     &quot;dep_delay&quot;   
+ [5] &quot;arr_time&quot;     &quot;arr_delay&quot;    &quot;carrier&quot;      &quot;tailnum&quot;     
+ [9] &quot;flight&quot;       &quot;dest&quot;         &quot;air_time&quot;     &quot;distance&quot;    
+[13] &quot;hour&quot;         &quot;minute&quot;       &quot;carrier_name&quot; &quot;dest_name&quot;   </code></pre>
+<p>Another good idea is to take a look at the dataset in table form. With this dataset having more than 50,000 rows, we won’t explicitly show the results of the command here. I recommend you enter the command into the Console <strong><em>after</em></strong> you have run the <strong>R</strong> chunks above to load the data into <strong>R</strong>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">View</span>(flights)</code></pre></div>
+<p>While not required, it is highly recommended you use the <code>dplyr</code> package to manipulate and summarize your data set as needed. It uses a syntax that is easy to understand using chaining operations. Below I’ve created a few examples of using <code>dplyr</code> to get information about the Portland flights in 2014. You will also see the use of the <code>ggplot2</code> package, which produces beautiful, high-quality academic visuals.</p>
+<p>We begin by checking to ensure that needed packages are installed and then we load them into our current working environment:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># List of packages required for this analysis</span>
+pkg &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;dplyr&quot;</span>, <span class="st">&quot;ggplot2&quot;</span>, <span class="st">&quot;knitr&quot;</span>, <span class="st">&quot;bookdown&quot;</span>, <span class="st">&quot;devtools&quot;</span>)
+<span class="co"># Check if packages are not installed and assign the</span>
+<span class="co"># names of the packages not installed to the variable new.pkg</span>
+new.pkg &lt;-<span class="st"> </span>pkg[<span class="op">!</span>(pkg <span class="op">%in%</span><span class="st"> </span><span class="kw">installed.packages</span>())]
+<span class="co"># If there are any packages in the list that aren&#39;t installed,</span>
+<span class="co"># install them</span>
+<span class="cf">if</span> (<span class="kw">length</span>(new.pkg))
+  <span class="kw">install.packages</span>(new.pkg, <span class="dt">repos =</span> <span class="st">&quot;http://cran.rstudio.com&quot;</span>)
+<span class="co"># Load packages (thesisdowndss will load all of the packages as well)</span>
+<span class="kw">library</span>(thesisdowndss)</code></pre></div>
+
+<p>The example we show here does the following:</p>
+</div>
+<div id="additional-resources" class="section level2">
+<h2><span class="header-section-number">1.6</span> Additional resources</h2>
+<ul>
+<li><p><em>Markdown</em> Cheatsheet - <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" class="uri">https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet</a></p></li>
+<li><p><em>R Markdown</em> Reference Guide - <a href="https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf" class="uri">https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf</a></p></li>
+<li><p><code>dplyr</code> Documentation - <a href="http://dplyr.tidyverse.org/" class="uri">http://dplyr.tidyverse.org/</a></p></li>
+<li><p><code>ggplot2</code> Documentation - <a href="http://ggplot2.tidyverse.org/" class="uri">http://ggplot2.tidyverse.org/</a></p></li>
+</ul>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>Source Code can be found at <a href="https://github.com/akozlu/TennisPrediction/blob/master/DataExtraction.py">akozlu Github</a><a href="1-rmd-basics.html#fnref1">↩</a></p></li>
+<li id="fn2"><p>The following mathematical calculations are taken from <span class="citation">Spanias &amp; Knottenbelt (2013)</span>. Derivation of the formulas can be found at <span class="citation">Barnett &amp; Clarke (2005)</span><a href="1-rmd-basics.html#fnref2">↩</a></p></li>
+<li id="fn3"><p>The C# source code for implementing Sipko’s paper can be found at <a href="https://github.com/okh1/tennis-prediction">Github</a><a href="1-rmd-basics.html#fnref3">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="2-math.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": [["thesis.pdf", "PDF"], ["thesis.epub", "EPUB"], ["thesis.docx", "Word"]],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+% This is the Duke University Statistical Science LaTeX thesis template.
+% It has been adapted from the Reed College LaTeX thesis template. The
+% adaptation was done by Mine Cetinkaya-Rundel (MCR). Some of the comments
+% that are specific to Reed College have been removed.
+%
+% Most of the work on the original Reed College document class and template
+% was done by Sam Noble (SN). Later comments etc. by Ben Salzberg (BTS).
+% Additional restructuring and APA support by Jess Youngberg (JY).
+%
+% See https://www.reed.edu/cis/help/latex/ for help. There are a
+% great bunch of help pages there, with notes on
+% getting started, bibtex, etc. Go there and read it if you're not
+% already familiar with LaTeX.
+%
+% Any line that starts with a percent symbol is a comment.
+% They won't show up in the document, and are useful for notes
+% to yourself and explaining commands.
+% Commenting also removes a line from the document;
+% very handy for troubleshooting problems. -BTS
+
+%%
+%% Preamble
+%%
+% \documentclass{<something>} must begin each LaTeX document
+\documentclass[12pt,oneside]{dukestatscithesis}
+% Packages are extensions to the basic LaTeX functions. Whatever you
+% want to typeset, there is probably a package out there for it.
+% Chemistry (chemtex), screenplays, you name it.
+% Check out CTAN to see: http://www.ctan.org/
+%%
+\usepackage{graphicx,latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb,amsthm}
+\usepackage{longtable,booktabs,setspace}
+\usepackage{chemarr} %% Useful for one reaction arrow, useless if you're not a chem major
+\usepackage[hyphens]{url}
+% Added by CII
+\usepackage{hyperref}
+\usepackage{lmodern}
+\usepackage{float}
+\floatplacement{figure}{H}
+% End of CII addition
+\usepackage{rotating}
+
+% Next line commented out by CII
+%%% \usepackage{natbib}
+% Comment out the natbib line above and uncomment the following two lines to use the new
+% biblatex-chicago style, for Chicago A. Also make some changes at the end where the
+% bibliography is included.
+%\usepackage{biblatex-chicago}
+%\bibliography{thesis}
+
+
+% Added by CII (Thanks, Hadley!)
+% Use ref for internal links
+\renewcommand{\hyperref}[2][???]{\autoref{#1}}
+\def\chapterautorefname{Chapter}
+\def\sectionautorefname{Section}
+\def\subsectionautorefname{Subsection}
+% End of CII addition
+
+% Added by CII
+\usepackage{caption}
+\captionsetup{width=5in}
+% End of CII addition
+
+% \usepackage{times} % other fonts are available like times, bookman, charter, palatino
+
+
+% To pass between YAML and LaTeX the dollar signs are added by CII
+\title{EAS 499 Final Thesis}
+\author{Ali Kozlu}
+% The month and year that you submit your FINAL draft TO THE LIBRARY (May or December)
+\date{Dec 2018}
+\advisor{Professor Marcus Mitchell}
+\institution{University Of Pennsylvania}
+\degree{Bachelor of Science in Computer and Cognitive Science}
+%\committeememberone{}
+%\committeemembertwo{}
+%\dus{}
+%If you have two advisors for some reason, you can use the following
+% Uncommented out by CII
+% End of CII addition
+
+%%% Remember to use the correct department!
+\department{Department of Computer and Cognitive Science}
+
+% Added by CII
+%%% Copied from knitr
+%% maxwidth is the original width if it's less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\renewcommand{\contentsname}{Table of Contents}
+% End of CII addition
+
+\setlength{\parskip}{0pt}
+
+% Added by CII
+  %\setlength{\parskip}{\baselineskip}
+  \usepackage[parfill]{parskip}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\Acknowledgements{
+
+}
+
+\Dedication{
+
+}
+
+\Preface{
+
+}
+
+\Abstract{
+
+}
+
+	\usepackage{amsmath}
+	\usepackage{float}
+	\usepackage{booktabs}
+	\usepackage{longtable}
+	\usepackage{array}
+	\usepackage{multirow}
+	\usepackage[table]{xcolor}
+	\usepackage{wrapfig}
+	\usepackage{float}
+	\usepackage{colortbl}
+	\usepackage{pdflscape}
+	\usepackage{tabu}
+	\usepackage{threeparttable}
+	\usepackage{threeparttablex}
+	\usepackage[normalem]{ulem}
+	\usepackage{makecell}
+	\usepackage{xcolor}
+% End of CII addition
+%%
+%% End Preamble
+%%
+%
+
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[chapter]
+\theoremstyle{definition}
+\newtheorem{exercise}{Exercise}[chapter]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
+\begin{document}
+
+% Everything below added by CII
+  \maketitle
+
+\frontmatter % this stuff will be roman-numbered
+\pagestyle{empty} % this removes page numbers from the frontmatter
+
+
+
+  \hypersetup{linkcolor=black}
+  \setcounter{tocdepth}{2}
+  \tableofcontents
+
+  \listoftables
+
+  \listoffigures
+
+
+
+\mainmatter % here the regular arabic numbering starts
+\pagestyle{fancyplain} % turns page numbering back on
+
+\chapter{thesisdowndss::thesis\_epub:
+default}\label{thesisdowndssthesis_epub-default}
+
+Placeholder
+
+\chapter{This chunk ensures that the thesisdowndss package
+is}\label{this-chunk-ensures-that-the-thesisdowndss-package-is}
+
+Placeholder
+
+\section{Review of Previous Work}\label{review-of-previous-work}
+
+\section{Ramer-Douglas-Peucker
+algorithm}\label{ramer-douglas-peucker-algorithm}
+
+\section{Application of RDP Algorithm to Play
+Data}\label{application-of-rdp-algorithm-to-play-data}
+
+\chapter{This chunk ensures that the thesisdowndss package
+is}\label{this-chunk-ensures-that-the-thesisdowndss-package-is-1}
+
+Placeholder
+
+\section{The Rub Concept}\label{the-rub-concept}
+
+\section{Determining Route
+Intersection}\label{determining-route-intersection}
+
+\section{Identfying Slant-Flat
+Concept}\label{identfying-slant-flat-concept}
+
+\section{Limitations}\label{limitations}
+
+\section{Future Works}\label{future-works}
+
+\chapter*{Conclusion}\label{conclusion}
+\addcontentsline{toc}{chapter}{Conclusion}
+
+The present work hopes to add to extensive research that has been
+conducted into the prediction of tennis matches. We have looked at how
+ensemble models can be used for tennis match predictor domain. Using
+110008 tennis matches played between 2004-2017, we have devised a
+learning set that consists of seven features based on research by Sipko
+and Knottenbelt, using their proposed methods of weighing historical
+matches. We then introduced stacked generalization as a novel tennis
+prediction model. Based on our knowledge and research, no one has used
+an ensembling technique to combine information from multiple predictive
+models to generate a new tennis match model. We investigated whether the
+performance of multiple ensemble models can be replicated in the domain
+of tennis match prediction. Although all of our proposed ensemble models
+perform with similar accuracy compared to state of the art models
+proposed by other researchers, we argue that tennis models cannot yet
+achieve a positive return on investment on traditional pre-game betting
+markets against bookmakers. We then turn our attention to betting
+exchange markets and propose a new approach that uses model class
+probabilities to make a profit by predicting future tennis market
+movements. An example from Wimbledon 2018 is given to show why we think
+using class probabilities can give us new avenues of profit. Although we
+have only tested this new framework fully during the ATP Finals in
+November, we will continue our work to create a framework for betting on
+exchange markets before the first Grand Slam Tournament of 2019 season.
+
+\chapter*{References}\label{references}
+\addcontentsline{toc}{chapter}{References}
+
+Placeholder
+
+
+% Index?
+
+\end{document}

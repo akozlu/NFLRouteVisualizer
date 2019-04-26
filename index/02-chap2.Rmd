@@ -1,0 +1,90 @@
+```{r include_packages_3, include = FALSE}
+# This chunk ensures that the thesisdowndss package is
+# installed and loaded. This thesisdowndss package includes
+# the template files for the thesis and also two functions
+# used for labeling and referencing
+if(!require(devtools))
+  install.packages("devtools", repos = "http://cran.rstudio.com")
+if(!require(dplyr))
+    install.packages("dplyr", repos = "http://cran.rstudio.com")
+if(!require(ggplot2))
+    install.packages("ggplot2", repos = "http://cran.rstudio.com")
+if(!require(ggplot2))
+    install.packages("bookdown", repos = "http://cran.rstudio.com")
+if(!require(qwraps2))
+    install.packages("qwraps2", repos = "http://cran.rstudio.com")
+if(!require(pander))
+    install.packages("pander", repos = "http://cran.rstudio.com")
+if(!require(gridExtra))
+    install.packages("gridExtra", repos = "http://cran.rstudio.com")
+if(!require(thesisdowndss)){
+  library(devtools)
+  devtools::install_github("akozlu/thesisdowndss")
+  }
+library(thesisdowndss)
+library(qwraps2)
+library(knitr)
+# List of packages required for this analysis
+pkg <- c("dplyr", "ggplot2", "knitr", "bookdown", "devtools")
+# Check if packages are not installed and assign the
+# names of the packages not installed to the variable new.pkg
+new.pkg <- pkg[!(pkg %in% installed.packages())]
+# If there are any packages in the list that aren't installed,
+# install them
+if (length(new.pkg))
+  install.packages(new.pkg, repos = "http://cran.rstudio.com")
+options(qwraps2_markup = "markdown")
+
+```
+
+# Identying A Certain Route Concept {#math}
+
+<!-- Required to number equations in HTML files -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+
+## The Rub Concept
+
+Simply put, the Rub Concept designs two or more receivers routes in the same area so that receivers can run their defenders into combined-traffic, creating seperation for one or both receivers. A version of rub concept occurs when two receivers on the same side run a flat-slant combination. This concept can be run from multiple offensive looks, such as Trips, Dubs formations or empty sets, as shown in the pictures below.
+```{r rubimages,echo=FALSE,fig.height= 10, fig.cap=" Slant-Flat Rub Concept from different looks",out.extra="angle=360, scale=0.5"}
+include_graphics(path = "figure/rub2.png")
+include_graphics(path = "figure/rub4.png")
+```
+In order to identify a slant flat rub route concept, we must automatically detect certain additional features from receiver trajectories. Firstly, we can check whether two receiver trajectories intersect at a given point, which is essential to create traffic in a certain area of the field. This is not enough however, since we can observe trajectory intersections in other concepts such as the mesh concept as well. Thus we have to limit the pair of trajectories we investigate between players who are on the same side of the formation (i.e. same side of the ball). Moreover, in the slant-flat concept, the intersection occurs (most of the time) within 5 yards of line of scrimmage. The script written for this project achieves this by grouping the receivers to left and right hand side of the ball and checking if combination of routes for two receivers on the sime side intersect within 5 yards of line of scrimmage. Since the trajectories we observe we observe these three criterion in a play, alongside with turning points associated with slant and flat routes, we add the play to our database and display it. 
+
+## Determining Route Intersection
+Since the trajectories of players cannot be defined by lines, they cannot be defined by simple parametrized functions. Thus in order to do a deterministic spatial analysis of intersection, we treat the routes as Polygons and use the [Shapely library](https://shapely.readthedocs.io/en/latest/manual.html#introduction), which is a Python package for set-theoretic analysis and manipulation of planar features using. Given two polygons, the library can determine whether the two intersect at any given point, as the spatial data model provided by the library is able to evualute *intersects* relationship between two polygons. 
+
+
+## Identfying Slant-Flat Concept
+As mentioned above if two receivers in a play have turning points, stem length and branches associated with slant and flat routes and their routes intersect within 5 yards of line of scrimmage on a certain side of the ball, we flag the play and add it to a certain database. Running the script on the Chiefs vs. Patriots game, we flag the play below as a slant-flat concept on the right hand side of the field as it succesfully satisfies each of our criteria. 
+
+```{r slantflat1,echo=FALSE,fig.height= 10, fig.cap="Ball on left hashmark. On the right hand side, Kelce runs a slant and Wilson goes to the flat. Play is added to database ",out.extra="angle=360, scale=0.6"}
+include_graphics(path = "figure/4251.png")
+
+```
+Chiefs also run a more complicated version of the slant-flat concept in a goal line situation. In the figure below two receivers on the left hand side run the slant and the running back Kareem Hunt goes to the flat and catches the ball for a touchdown. Because of plays such as this, we check if the running back route trajectory intersects with *both* left side and right side receivers. This means that we do not classify the running back as a "left side of the ball" or "right-side of the ball", which allows us to identify slant-flat concepts that involve the running backs. 
+```{r slantflat2,echo=FALSE,fig.height= 10, fig.cap="On the right hand side, Conley and Wilson run a slants, creating traffic. Running back goes to the flat. We can see the brown trajectory of RB intersects with both wide receivers. Play is added to database.",out.extra="angle=360, scale=0.6"}
+include_graphics(path = "figure/2317.png")
+
+```
+
+## Limitations
+
+In idenfying slant flat concept, since we are looking for an intersection close to line of scrimmage, it is possible to get false flags from certain tight alignments, where receiver trajectories do intersect in the middle of the field. An example is shown below, where two tight ends on the right hand side run routes that intersect in the middle of the field. The observation from six games on the dataset is that this method can identify three to seven potential plays (out of ~75) that have the possibility of including a slant-flat concept. In our observations, at most three plays are typical slant flat concepts. We have also observed method also is susceptible to confusing slant-flant concept with a curl-flat route combination run from certain alignmnets. Certain important questions remain, as how to generalize a method that can identify multiple concepts automatically. The final goal of this project will be to have a fully-automated route concept identification system based on alignment and route characteristics. 
+
+## Future Works
+
+The first step will be to devise an unsupervised machine learning model based on k-means to classify routes run by receivers using the widely accepted route tree. Once we have the model, we can automatically classify routes and check if certain combinations of routes occur in certain part of the field. If they do, the methodology that we used specifically to identfying slant-flat concept can be generalized to identify other concepts. The end goal should be to extract plays that run a certain concept from our plays database, so the coaches do not have to through all of the film tape of NFL matches to see certain concepts. 
+
+```{r slantflat3,echo=FALSE,fig.height= 10, fig.cap="Blue and green routes run by tight ends intersect within 5 yards. The play is wrongly tagged as slant-flat concept",out.extra="angle=360, scale=0.6"}
+include_graphics(path = "figure/1810.png")
+
+```
+
+## Conclusion
+
+The present work hopes to establish a starting point for the initial goal of automatically identfying American Football receiver route concepts. Through a specific example, the slant-flat concept, we explain the general framework of identfying the route concepts, while touching on some important route trajectory features that will be important for the second part of the project, which is to automatically identify different routes as specified by the route tree using unsupervised machine learning. 

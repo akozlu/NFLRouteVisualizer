@@ -1,0 +1,125 @@
+<!--
+Author: Colorlib
+Author URL: https://colorlib.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Creative Colorlib SignUp Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+<!-- //web font -->
+</head>
+
+<script>
+    $(function() {
+        $( "#datepicker" ).datepicker();
+    });
+</script>
+
+<body>
+	<!-- main -->
+	<div class="main-w3layouts wrapper">
+		<h1>Creative SignUp Form</h1>
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+				<form action="/createaccount" method="post">
+        <div class="form-group">
+            <label>First Name</label>
+            <input type="text" class="form-control" name="firstName" required>
+        </div>
+
+        <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" class="form-control" name="lastName" required>
+        </div>
+
+        <div class="form-group">
+            <label>Enter email</label>
+            <input type="email" class="form-control" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" name="password" required pattern = "^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
+        </div>
+
+        <div class="form-group">
+        	<label>Birthday</label>
+        	<input type="date" class="form-control" name="birthday" required>
+        </div>
+        
+        <div class="form-group">
+        	<label>Affiliation</label>
+        	<input type="text" class="form-control" name="affiliation" required>
+        </div>
+        
+        <div class="form-group">
+        	<fieldset>
+			  <legend>Choose your interests</legend>
+			  <div>
+			    <input type="checkbox" id="coding" name="interest" value="coding">
+			    <label for="coding">Coding</label>
+			  </div>
+			  <div>
+			    <input type="checkbox" id="music" name="interest" value="music">
+			    <label for="music">Music</label>
+			  </div>
+			  <div>
+			    <input type="checkbox" id="cycling" name="interest" value="cycling">
+			    <label for="cycling">Cycling</label>
+			  </div>
+			  <div>
+			    <input type="checkbox" id="poker" name="interest" value="poker">
+			    <label for="poker">Poker</label>
+			  </div>
+			  <div>
+			    <input type="checkbox" id="debate" name="interest" value="debate">
+			    <label for="debate">Debate</label>
+			  </div>
+			  <div>
+			    <input type="checkbox" id="swimming" name="interest" value="swimming">
+			    <label for="swimming">Swimming</label>
+			  </div>
+			  <div>
+			    <input type="checkbox" id="eating" name="interest" value="eating">
+			    <label for="eating">Eating</label>
+			  </div>
+			</fieldset>
+			
+        </div>
+
+        <button type="submit">Signup</button>
+    </form>
+				<p>Don't have an Account? <a href="/login"> Login Now!</a></p>
+			</div>
+		</div>
+		<!-- copyright -->
+		<div class="colorlibcopy-agile">
+			<p>© 2018 Colorlib Signup Form. All rights reserved | Design by <a href="https://colorlib.com/" target="_blank">Colorlib</a></p>
+		</div>
+		<!-- //copyright -->
+		<ul class="colorlib-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<!-- //main -->
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>EAS 499 Final Thesis</title>
+  <meta name="description" content="EAS 499 Final Thesis">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="EAS 499 Final Thesis" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="EAS 499 Final Thesis" />
+  
+  
+  
+
+<meta name="author" content="Ali Kozlu">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="1-rmd-basics.html">
+<link rel="next" href="3-ref-labels.html">
+<style type="text/css">
+p.abstract{
+  text-align: center;
+  font-weight: bold;
+}
+div.abstract{
+  margin: auto;
+  width: 90%;
+}
+</style>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"></a></li>
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="1" data-path="1-rmd-basics.html"><a href="1-rmd-basics.html"><i class="fa fa-check"></i><b>1</b> Background</a><ul>
+<li class="chapter" data-level="1.1" data-path="1-rmd-basics.html"><a href="1-rmd-basics.html#tennis-datasets"><i class="fa fa-check"></i><b>1.1</b> Tennis Datasets</a></li>
+<li class="chapter" data-level="1.2" data-path="1-rmd-basics.html"><a href="1-rmd-basics.html#tennis-betting"><i class="fa fa-check"></i><b>1.2</b> Tennis Betting</a></li>
+<li class="chapter" data-level="1.3" data-path="1-rmd-basics.html"><a href="1-rmd-basics.html#review-of-previous-work"><i class="fa fa-check"></i><b>1.3</b> Review of Previous Work</a></li>
+<li class="chapter" data-level="1.4" data-path="1-rmd-basics.html"><a href="1-rmd-basics.html#including-plots"><i class="fa fa-check"></i><b>1.4</b> Including plots</a></li>
+<li class="chapter" data-level="1.5" data-path="1-rmd-basics.html"><a href="1-rmd-basics.html#loading-and-exploring-data"><i class="fa fa-check"></i><b>1.5</b> Loading and exploring data</a></li>
+<li class="chapter" data-level="1.6" data-path="1-rmd-basics.html"><a href="1-rmd-basics.html#additional-resources"><i class="fa fa-check"></i><b>1.6</b> Additional resources</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-math.html"><a href="2-math.html"><i class="fa fa-check"></i><b>2</b> Feature Engineering</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-math.html"><a href="2-math.html#feature-extraction"><i class="fa fa-check"></i><b>2.1</b> Feature Extraction</a></li>
+<li class="chapter" data-level="2.2" data-path="2-math.html"><a href="2-math.html#feature-selection"><i class="fa fa-check"></i><b>2.2</b> Feature Selection</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="2-math.html"><a href="2-math.html#computing-advanced-statistical-metrics"><i class="fa fa-check"></i><b>2.2.1</b> Computing Advanced Statistical Metrics</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-ref-labels.html"><a href="3-ref-labels.html"><i class="fa fa-check"></i><b>3</b> Tables, Graphics, References, and Labels</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-ref-labels.html"><a href="3-ref-labels.html#tables"><i class="fa fa-check"></i><b>3.1</b> Tables</a></li>
+<li class="chapter" data-level="3.2" data-path="3-ref-labels.html"><a href="3-ref-labels.html#figures"><i class="fa fa-check"></i><b>3.2</b> Figures</a></li>
+<li class="chapter" data-level="3.3" data-path="3-ref-labels.html"><a href="3-ref-labels.html#footnotes-and-endnotes"><i class="fa fa-check"></i><b>3.3</b> Footnotes and Endnotes</a></li>
+<li class="chapter" data-level="3.4" data-path="3-ref-labels.html"><a href="3-ref-labels.html#bibliographies"><i class="fa fa-check"></i><b>3.4</b> Bibliographies</a></li>
+<li class="chapter" data-level="3.5" data-path="3-ref-labels.html"><a href="3-ref-labels.html#anything-else"><i class="fa fa-check"></i><b>3.5</b> Anything else?</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-organization.html"><a href="4-organization.html"><i class="fa fa-check"></i><b>4</b> Organization</a></li>
+<li class="chapter" data-level="" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i>Conclusion</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="A-the-first-appendix.html"><a href="A-the-first-appendix.html"><i class="fa fa-check"></i><b>A</b> The First Appendix</a></li>
+<li class="chapter" data-level="B" data-path="B-the-second-appendix-for-fun.html"><a href="B-the-second-appendix-for-fun.html"><i class="fa fa-check"></i><b>B</b> The Second Appendix, for Fun</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">EAS 499 Final Thesis</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="math" class="section level1">
+<h1><span class="header-section-number">Chapter2</span> Feature Engineering</h1>
+<!-- Required to number equations in HTML files -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<div id="feature-extraction" class="section level2">
+<h2><span class="header-section-number">2.1</span> Feature Extraction</h2>
+<p>Any tennis prediction model must be able to represent the skill difference between both players. Since our dataset includes two x observations (of the same variable) uniformly sampled in the real numberrange [0,1], taking the difference or ratio for two values of same variable becomes natural choices for feature engineering. For example, if we wanted to compute the ACES variable for an upcoming match, we simply do: <span class="math inline">\(aces_{final} = aces_{1} - aces_{2}\)</span>. This approach also cuts the dimension of our feature space in half, which is important in machine learning because the amount of data required to provide a reliable analysis grows exponentially with the dimensionality of features. The so-called <em>large p, small n</em> problem, where p is the number of features and n is the number of samples, tend to be prone to overfitting. An overfitted model can mistake small fluctuations for important variance which can lead to classification errors. One can argue that using two observations of the same statistic can preserve more information and give our model a better chance to find certain patterns, but in practice the difference in statistics of two player’s has enough predictive performance.<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a> So we will be using the differences in variables as our match features. Any effective tennis prediction model must also consider the most representative set of features to capture all possible qualities of both players.Constructing or selecting features from tennis statistics requires a deep understanding of the sport and the true meaning behind the numbers. Thus, a significant challenge for any tennis prediction model is the transformation match statistics into the most representative match features. In the present work, this transformation is done in two major phases, Feature Selection and Feature Construction.</p>
+<table>
+<caption><span id="tab:difference">Table 2.1: </span> Difference Transformation for Generating Final Features</caption>
+<colgroup>
+<col width="31%" />
+<col width="37%" />
+<col width="30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Avg. Return % for P1</th>
+<th align="center">Avg. Return % for P2</th>
+<th align="center">Final Feature</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">0.58961</td>
+<td align="center">0.14544</td>
+<td align="center">0.44417</td>
+</tr>
+<tr class="even">
+<td align="center">0.66203</td>
+<td align="center">0.98726</td>
+<td align="center">-0.32523</td>
+</tr>
+<tr class="odd">
+<td align="center">0.89746</td>
+<td align="center">0.58317</td>
+<td align="center">0.31429</td>
+</tr>
+<tr class="even">
+<td align="center">0.06489</td>
+<td align="center">0.11745</td>
+<td align="center">-0.05256</td>
+</tr>
+<tr class="odd">
+<td align="center">0.44753</td>
+<td align="center">0.34509</td>
+<td align="center">0.10244</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="feature-selection" class="section level2">
+<h2><span class="header-section-number">2.2</span> Feature Selection</h2>
+<div id="computing-advanced-statistical-metrics" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Computing Advanced Statistical Metrics</h3>
+<p>The most innovative aspect about Sipko and Knottenbelt’s work is how they apply their knowledge of the tennis domain to generate advanced metrics using player’s performance statistics found in OnCourt Dataset. Three metrics that Sipko and Knottenbelt introduce that are part of our feature set are:<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a></p>
+<div id="overal-winning-on-serve-percentage" class="section level4">
+<h4><span class="header-section-number">2.2.1.1</span> Overal Winning on Serve Percentage</h4>
+The idea behind this metric is to combine the winning percentage on first and second serve found in OnCourt dataset to come up with a single metric that quantifies a player’s <em>strength when serving</em>. WSP is calculated in the following way for player i:
+<span class="math display">\[\begin{equation}
+\label{eq:WSP}
+{WSP_{i} = W1SP_{i} \cdot \ FS_{i} + W2SP_{i} \cdot \ (1 - FS_{i})}
+\end{equation}\]</span>
+<p><em><span class="math inline">\(W1SP\)</span> = Winning % on first Serve</em><br />
+<em><span class="math inline">\(W2SP\)</span> = Winning % on second Serve</em><br />
+<em><span class="math inline">\(FS\)</span> = First Serve Percentage.</em></p>
+</div>
+<div id="completeness" class="section level4">
+<h4><span class="header-section-number">2.2.1.2</span> Completeness</h4>
+Similar to WSP, Completeness combines a player’s serve and return percentages in order to combine their offensive and defensive game. For player i:
+<span class="math display">\[\begin{equation}
+\label{eq:complete}
+{Complete_{i} = WSP_{i} \cdot \ WRP_{i}}
+\end{equation}\]</span>
+<p><em><span class="math inline">\(WSP\)</span> = Overal Winning on Serve Percentage</em><br />
+<em><span class="math inline">\(WRP\)</span> = Overal Winning on Receiving Points percentage</em></p>
+</div>
+<div id="advantage-on-serve" class="section level4">
+<h4><span class="header-section-number">2.2.1.3</span> Advantage on Serve</h4>
+<p>This is the only metric in our dataset that combines information from both players. The idea of Knottenbelt and Sipko is to grasp the difference between the serving player’s serve strength and the returning player’s return strength, thereby quantifying how much advantage serving player has over the returning player. The authors name this feature SERVEADV (player’s advantage on serve). The feature is computed in the following way:</p>
+<span class="math display">\[\begin{equation}
+\label{eq:serveadv}
+{SERVEADV_{1} = WSP_{1} - WRP_{2}}
+\end{equation}\begin{equation}
+{SERVEADV_{2} = WSP_{2} - WRP_{1}}
+\end{equation}\]</span>
+</div>
+<div id="additional-features" class="section level4">
+<h4><span class="header-section-number">2.2.1.4</span> Additional Features</h4>
+<strong>Head to Head</strong><br />
+This metric takes the outcomes of matches between two players into account. For any two players in a given match, we look at the past matches between two players and calculate the number of matches both player has won. Afterwards Head-to-Head feature is calculated as follows for players i and j:
+<span class="math display">\[\begin{equation}
+\label{eq:h2h}
+{HijH = \textrm{Player i wins} / \textrm{Total Matches between i and j}}
+\end{equation}\begin{equation}
+{HjiH = \textrm{Player j wins} / \textrm{Total Matches between i and j}}
+\end{equation}\]</span>
+<strong>Aces and Percentage of Total Points Won</strong><br />
+These metrics quantify the total number of Aces and Percentage of Total Points Won by a player in a match. Since these values are dependent on the number of games in a match, these features will be normalized later.
+<span class="math display">\[\begin{equation}
+\label{eq:tpw}
+{TPW_{i} = \textrm{Total points won by player i} / \textrm{Total points in a match}}
+\end{equation}\]</span>
+<p><strong>Percentage of Breaking Points</strong><br />
+This feature quantifies the percentage of break points won in that match for both players. If there were no breaking points in the match, that match is dropped from the dataset. Also breaking point percentages that are not in range [0,1] are dropped to reduce noise in the data. Adding this feature is a controversial decision, because they are few observations (breaking points) in a match, which inevitably result in extreme probabilities. However, this issue is partly alliviated by how we construct features, which is explained in the next section.</p>
+<p><strong>Additional Information</strong><br />
+For every match, the total number of games, the total number of sets, the year and the court type of the match are also added to our data frame, as these information are needed for construction our final features. Computing number of games and sets also give us flexibility for further work, as we are also interested in predicting number of games and sets. A Python script is responsible extracting advanced metrics, head to head statistics and additional information from the initial OnCourt per match statistics. The resulting dataframe is converted into a Sqlite3 Database for further use. The first thirty rows of our initial dataset and the resulting database can be seen below.<a href="#fn6" class="footnoteRef" id="fnref6"><sup>6</sup></a></p>
+<div class="figure" style="text-align: center"><span id="fig:initialdatasetpicture"></span>
+<img src="figure/initialdataset.png" alt="On Court Per Match Statistics of First 50 Matches" width="775" scale=0.3 />
+<p class="caption">
+Figure 2.1: On Court Per Match Statistics of First 50 Matches
+</p>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="4">
+<li id="fn4"><p>In practice, hierarchical models of Barnett show that the difference between the serve-winning probabilities of the two players is enough to predict outcome<a href="2-math.html#fnref4">↩</a></p></li>
+<li id="fn5"><p>Taken from Sipko &amp; Knottenbelt 3.1<a href="2-math.html#fnref5">↩</a></p></li>
+<li id="fn6"><p>You can find the script for extracting metrics and information <a href="https://github.com/akozlu/TennisPrediction/blob/master/FeatureExtraction.py">here.</a><a href="2-math.html#fnref6">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="1-rmd-basics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="3-ref-labels.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": [["thesis.pdf", "PDF"], ["thesis.epub", "EPUB"], ["thesis.docx", "Word"]],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
